@@ -1,11 +1,10 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} **/
 module.exports = {
-  testEnvironment: "node",
-  transform: {
-    "^.+\.tsx?$": ["ts-jest",{}],
-  },
+  preset: 'ts-jest',
+  testEnvironment: 'node',
   collectCoverage: true,
-  collectCoverageFrom: ["src/**/*.ts"],
-  coverageDirectory: "coverage",
-  coverageReporters: ["lcov", "text"],
+  collectCoverageFrom: ['src/**/*.ts'],
+  coverageDirectory: 'coverage',
+  coverageReporters: ['lcov', 'text'],
+  testPathIgnorePatterns: ['/dist/'],
 };

@@ -1,4 +1,4 @@
-import { add } from '../src/math';
+import { add } from '../src/math/math';
 
 describe('add', () => {
   it('adds two positive numbers', () => {
