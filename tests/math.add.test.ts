@@ -1,4 +1,4 @@
-import { add, multiply, subtract } from '../src/math/math';
+import { add, divide, multiply, subtract } from '../src/math/math';
 
 describe('add', () => {
   it('adds two positive numbers', () => {
@@ -54,5 +54,27 @@ describe('multiply', () => {
   it('multiplies by zero', () => {
     expect(multiply(0, 5)).toBe(0);
     expect(multiply(5, 0)).toBe(0);
+  });
+});
+
+describe('divide', () => {
+  it('divides two positive numbers', () => {
+    expect(divide(6, 3)).toBe(2);
+  });
+
+  it('divides negative and positive number', () => {
+    expect(divide(-6, 3)).toBe(-2);
+  });
+
+  it('divides two negative numbers', () => {
+    expect(divide(-6, -3)).toBe(2);
+  });
+
+  it('divides by one', () => {
+    expect(divide(5, 1)).toBe(5);
+  });
+
+  it('throws on division by zero', () => {
+    expect(() => divide(5, 0)).toThrow('Division by zero');
   });
 });
