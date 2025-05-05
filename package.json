@@ -1,0 +1,22 @@
+{
+  "name": "test_sonar_typescript",
+  "version": "1.0.0",
+  "description": "test sonar typescript",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "sonar": "SONAR_TOKEN=$SONARCLOUD_TOKEN sonar-scanner"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "sonar-scanner": "^3.1.0",
+    "ts-jest": "^29.3.2",
+    "typescript": "^5.8.3"
+  }
+}
